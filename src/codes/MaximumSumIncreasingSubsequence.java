@@ -2,7 +2,7 @@ package codes;
 
 import java.util.Arrays;
 
-public class MaximumSunIncreasingSubsequence {
+public class MaximumSumIncreasingSubsequence {
 
     public static int maximumSumIncresingSubsequence(int[] nums) {
         if (nums == null || nums.length == 0)
@@ -19,7 +19,7 @@ public class MaximumSunIncreasingSubsequence {
                 }
             }
         }
-        return Arrays.stream(sumArr).max().getAsInt();
+        return Arrays.stream(sumArr).max().orElse(0);
     }
 
     public static void main(String[] args) {
